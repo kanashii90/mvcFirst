@@ -1,0 +1,230 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    min-width: 375px;
+    background-color: #fafafc;;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+    fieldset {
+        all: unset;
+    }
+
+    legend {
+        all: unset
+    }
+
+
+    .container {
+        margin: 0 auto;
+        padding: 0 64px;
+        max-width: 1280px;
+    }
+
+    .header {
+        max-width: 1280px;
+        margin: 0 auto;
+        box-shadow: 0 1px 3px 0 rgba(11, 12, 13, 0.16), 0 0 1px 0 rgba(11, 12, 13, 0.24);
+        background: #fff;
+    }
+
+    .logo {
+        display: flex;
+        gap: 0
+    }
+
+    .header_container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 19px 64px;
+
+    }
+
+    .counter {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+
+    .main-section {
+        margin-bottom: 24px;
+        margin-top: 24px;
+    }
+
+    .form {
+        padding: 24px;
+        border-radius: 4px;
+    }
+
+    .note-form {
+        display: flex;
+        flex-direction: column;
+    }
+
+label, .label {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 2;
+        color: #919191;
+    }
+
+::placeholder {
+    color: #919191;
+}
+
+input {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: #000;
+}
+
+
+.radio-list {
+    display: flex;
+    gap: 14px;
+    list-style: none;
+    padding-left: 0;
+}
+
+
+.radio {
+    appearance: none;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.radio[value="red"] {
+    background-color: #F37D7D;
+}
+
+.radio[value="green"] {
+    background-color: #C2F37D;
+}
+
+.radio[value="blue"] {
+    background-color: #7DE1F3;
+}
+
+.radio[value="yellow"] {
+    background-color: #F3DB7D;
+}
+
+.radio[value="purple"] {
+    background-color: #E77DF3;
+}
+
+.radio:checked {
+    border-color: white;
+    box-shadow: 0 0 0 3px white, /* Внутренняя обводка для создания промежутка */ 0 0 0 4.5px #007BFF; /* Внешняя обводка */
+}
+
+.message-error {
+    color: red;
+}
+
+.btn {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    border-radius: 10px;
+    padding: 6px 24px;
+    width: 232px;
+    height: 36px;
+    background-color: #457cdc;
+    border: none;
+}
+
+.button {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.filter-box {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-direction: row-reverse;
+    margin-bottom: 12px;
+}
+
+.notes_empty {
+    list-style: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+    color: #000;
+    padding-top: 138px;
+    flex: 1;
+}
+
+.notes-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.note, .favorite {
+    display: flex;
+    flex-direction: column;
+    flex-basis: calc((100% - 42px) / 3);
+
+    border-radius: 10px;
+    height: 100%;
+    box-shadow: 0 4px 8px 0 rgba(11, 12, 13, 0.08), 0 8px 16px 0 rgba(11, 12, 13, 0.04), 0 1px 2px 0 rgba(11, 12, 13, 0.08);
+}
+
+.note-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 12px;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.note-title {
+    flex: 1;
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #1f393d;
+}
+
+.fav-button, .del-button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.note-content {
+    padding: 12px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71429;
+    color: #000;
+}

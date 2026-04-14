@@ -1,10 +1,83 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./style.css"/>
+    <title>Document</title>
+
 </head>
 <body>
-$END$
+<div id="app"></div>
+<header class="header">
+    <div class="header_container">
+        <div class="logo">
+            <img src="./img/header_icon/Vector_1.svg" alt="logo">
+            <img src="./img/header_icon/Vector_2.svg" alt="N">
+            <img src="./img/header_icon/Vector_3.svg" alt="O">
+            <img src="./img/header_icon/Vector_4.svg" alt="T">
+            <img src="./img/header_icon/Vector_5.svg" alt="E">
+            <img src="./img/header_icon/Vector_6.svg" alt="S">
+        </div>
+        <div class="counter">
+            <img src="./img/header_icon/notes.svg" alt="notes">
+            <span class="counter-text"></span>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="main-section">
+        <div class="container">
+            <div class="form">
+                <form class="note-form" name="notes" action="">
+                    <label for="title">Название заметки</label>
+                    <input name="title" placeholder="Напишите название новой заметки..." id="title"/>
+                    <label for="content">Описание новой заметки</label>
+                    <input name="content" placeholder="Напишите описание новой заметки..." id="content"/>
+
+                    <fieldset class="fieldset">
+                        <legend class="label">Выберите цвет заметки</legend>
+                        <ul class="radio-list">
+                            <li><input checked class="radio" type="radio" name="color" value="yellow"/></li>
+                            <li><input class="radio" type="radio" name="color" value="red"/></li>
+                            <li><input class="radio" type="radio" name="color" value="green"/></li>
+                            <li><input class="radio" type="radio" name="color" value="blue"/></li>
+                            <li><input class="radio" type="radio" name="color" value="purple"/></li>
+                        </ul>
+                    </fieldset>
+                    <button class="btn" type="submit">
+                        <div class="button">
+                            <img src="./img/icon/plus-white.svg" alt="plus">
+                            <span>Добавить заметку</span>
+                        </div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="filter-box">
+            <!-- Ваш код -->
+        </div>
+    </section>
+    <section class="container">
+        <div class="notes-list">
+            <!-- Сюда будут рендерится заметки из JavaScript -->
+        </div>
+    </section>
+    <section class="container">
+        <div class="messages-box">
+            <!-- Сюда будут рендерится информационные сообщения из JavaScript -->
+        </div>
+    </section>
+
+</main>
+<script src="index.js"></script>
 </body>
 </html>
