@@ -74,6 +74,7 @@ const view = {
         const checkbox = document.createElement("input")
         checkbox.type = "checkbox"
         checkbox.checked = isChecked
+        checkbox.classList.add('checkbox-input')
         checkbox.addEventListener("change", e => {
             controller.toggleFilter()
         })
@@ -131,7 +132,6 @@ const view = {
             }
         })
     },
-
     renderCount(count) {
         const view = document.querySelector(".counter-text")
         view.textContent = "Всего заметок: " + count

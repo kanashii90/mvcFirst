@@ -310,8 +310,23 @@ input {
     gap: 8px;
     align-items: center;
     flex-direction: row-reverse;
-    margin-bottom: 12px;
+    margin-bottom: 16px;
+    margin-top: 5px;
+    justify-content: flex-start;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 2;
+    color: #000;
+
 }
+
+.checkbox-input {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    transition: 500ms;
+}
+
 
 .notes_empty {
     list-style: none;
