@@ -1,11 +1,3 @@
-const colors = {
-    GREEN: 'green',
-    BLUE: 'blue',
-    RED: 'red',
-    YELLOW: 'yellow',
-    PURPLE: 'purple',
-}
-
 const colorMap = {
     red: '#F37D7D',
     green: '#C2F37D',
@@ -114,7 +106,7 @@ const view = {
         return `
         <article id="${note.id}"
         class="note ${note.isFavorite ? 'favorite' : ''}">
-          <div class="note-header" style="background-color: ${colorMap[note.color]}"">
+          <div class="note-header" style="background-color: ${colorMap[note.color]}">
           <p class="note-title" >${note.title}</p>
           <button class="fav-button">
             ${note.isFavorite ? '<img src="./img/icon/heart_active.svg" alt="true">' : '<img src="./img/icon/heart_inactive.svg" alt="false">'}
@@ -147,18 +139,27 @@ const view = {
     },
     showMessageBox(message, error = false) {
         const box = document.querySelector(".messages-box")
-
-        const messageElement = document.createElement("span")
+        const messageContainer = document.createElement("div")
+        const img = document.createElement('img');
+        const messageElement = document.createElement('span')
         if (error) {
-            messageElement.classList.add("message-error")
+            messageContainer.classList.add('message-err')
+            img.src = './img/icon/warning.svg';
+            img.alt = 'error';
+            messageElement.textContent = message
         } else {
-            messageElement.classList.add("message-done")
+            messageContainer.classList.add('message-done')
+            img.src = './img/icon/done.svg';
+            img.alt = 'done';
+            messageElement.textContent = message
         }
-        messageElement.textContent = message
-        box.append(messageElement)
+
+        box.append(messageContainer)
+        messageContainer.append(img, messageElement)
+
         setTimeout(() => {
-            messageElement.remove()
-        }, 1000)
+            messageContainer.remove()
+        }, 2000)
     },
 }
 
@@ -168,6 +169,7 @@ const controller = {
     addNote(noteTitle, noteContent, color) {
 
         if (noteTitle.trim() !== '' && noteContent.trim() !== '') {
+            console.log(noteTitle.length)
             if (noteTitle.length > 50) {
                 view.showMessageBox("Максимальная длина заголовка 50 символов", true)
                 return false
@@ -213,3 +215,4 @@ function init() {
 }
 
 document.addEventListener('DOMContentLoaded', init)
+

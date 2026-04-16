@@ -34,32 +34,36 @@
 <main>
     <section class="main-section">
         <div class="container">
-            <div class="form">
-                <form class="note-form" name="notes" action="">
+            <form class="note-form" name="notes" action="" id="form">
+                <div class="form-up">
                     <label for="title">Название заметки</label>
                     <input name="title" placeholder="Напишите название новой заметки..." id="title"/>
-                    <label for="content">Описание новой заметки</label>
-                    <input name="content" placeholder="Напишите описание новой заметки..." id="content"/>
-
-                    <fieldset class="fieldset">
-                        <legend class="label">Выберите цвет заметки</legend>
-                        <ul class="radio-list">
-                            <li><input checked class="radio" type="radio" name="color" value="yellow"/></li>
-                            <li><input class="radio" type="radio" name="color" value="red"/></li>
-                            <li><input class="radio" type="radio" name="color" value="green"/></li>
-                            <li><input class="radio" type="radio" name="color" value="blue"/></li>
-                            <li><input class="radio" type="radio" name="color" value="purple"/></li>
-                        </ul>
-                    </fieldset>
-                    <button class="btn" type="submit">
-                        <div class="button">
+                </div>
+                <div class="form-down">
+                    <div class="form-content">
+                          <label for="content">Описание новой заметки</label>
+                        <textarea id="content" name="content" rows="3" cols="1" placeholder="Напишите описание новой заметки..."></textarea>
+                    </div>
+                    <div class="radio-group">
+                        <fieldset class="fieldset">
+                            <legend class="label">Выберите цвет заметки</legend>
+                            <ul class="radio-list">
+                                <li><input checked class="radio" type="radio" name="color" value="yellow"/></li>
+                                <li><input class="radio" type="radio" name="color" value="red"/></li>
+                                <li><input class="radio" type="radio" name="color" value="green"/></li>
+                                <li><input class="radio" type="radio" name="color" value="blue"/></li>
+                                <li><input class="radio" type="radio" name="color" value="purple"/></li>
+                            </ul>
+                        </fieldset>
+                        <button class="btn" type="submit" form="form">
                             <img src="./img/icon/plus-white.svg" alt="plus">
                             <span>Добавить заметку</span>
-                        </div>
-                    </button>
-                </form>
-            </div>
+                        </button>
+                    </div>
+                </div>
+            </form>
         </div>
+
     </section>
     <section class="container">
         <div class="filter-box">
@@ -73,7 +77,7 @@
     </section>
     <section class="container">
         <div class="messages-box">
-            <!-- Сюда будут рендерится информационные сообщения из JavaScript -->
+
         </div>
     </section>
 
