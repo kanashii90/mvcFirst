@@ -3,12 +3,12 @@
 *::after {
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-    margin: 0;
-    padding: 0;
+
+
 }
 
 html, body {
-    font-family: "Montserrat", sans-serif;
+
     font-style: normal;
     min-width: 375px;
     background-color: #fafafc;;
@@ -50,6 +50,7 @@ textarea, input {
     box-shadow: 0 1px 3px 0 rgba(11, 12, 13, 0.16), 0 0 1px 0 rgba(11, 12, 13, 0.24);
     background: #fff;
     margin: 0 auto;
+
 }
 
 .logo {
@@ -146,7 +147,7 @@ textarea {
 .radio-group {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
 .btn {
@@ -164,6 +165,7 @@ textarea {
     align-items: center;
     justify-content: center;
 }
+
 
 .fieldset-btn {
     display: flex;
@@ -183,9 +185,10 @@ input {
 
 .radio-list {
     display: flex;
-    gap: 14px;
+    gap: 20px;
     list-style: none;
-    padding-left: 0;
+    padding-left: 2px;
+    margin: 6px 0 0 0;
 }
 
 
@@ -196,6 +199,11 @@ input {
     height: 24px;
     border-radius: 50%;
     background-color: green;
+    margin: 0;
+}
+
+.radio.radio.radio {
+    border: none;
 }
 
 .radio[value="red"] {
