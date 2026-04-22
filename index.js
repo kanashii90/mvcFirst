@@ -78,7 +78,7 @@ const view = {
         checkbox.addEventListener("change", e => {
             controller.toggleFilter()
         })
-        //сделать условие с текстом
+
         filterContainer.textContent = "Показать только избранные заметки"
         filterContainer.append(checkbox)
         return filterContainer
